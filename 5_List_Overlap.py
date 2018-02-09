@@ -33,4 +33,10 @@ for numbers in a:
     if numbers in b:
         newlist.append(numbers)
 print('The values which repeat are:', newlist)
-    
+ 
+  
+####### USING SETS  
+##def r2():
+##   matching = list(set(a).intersection(set(b)))
+##  return matching
+##print(r2())
