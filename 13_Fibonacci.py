@@ -14,20 +14,22 @@ times = get_times()
 #    start = 1
 #    result = start + start
 
-for num in range(0,times):
- seq = []
- seq.append(1)
- x= seq[0]+0
- seq.append(x)
- y = seq[0]+seq[1]
- seq.append(y)
- z = seq[1]+seq[2]
- seq.append(z)
- a = seq[2]+seq[3]
- seq.append(a)
- print(seq)
-    
+def fib():
+    init =1
+    if times == 0:
+        fib = []
+    elif times == 1:
+        fib = [1]
+    elif times == 2:
+        fib = [1,1]
+    elif times >2:
+        fib = [1,1]
+        while init <(times-1):
+            fib.append(fib[init]+fib[init-1])
+            init += 1
+    return fib
 
+print(fib())    
 
 
 
@@ -36,7 +38,3 @@ for num in range(0,times):
 # 1+2 = 3 (1,1,2,3)
 # 2+3 = 5 (1,1,2,3,5)
 # 3+5 = 8 (1,1,2,3,5,8)
-# 5+8 = 13 (1,1,2,3,5,8,13)
-# 8+13 = 21 (1,1,2,3,5,8,13,21)
-# 13+21 = 34 (1,1,2,3,5,8,13,21,34)
-    
